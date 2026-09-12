@@ -846,6 +846,8 @@ GameObject:
   - component: {fileID: 1200626515}
   - component: {fileID: 1200626514}
   - component: {fileID: 1200626516}
+  - component: {fileID: 1200626518}
+  - component: {fileID: 1200626517}
   m_Layer: 0
   m_Name: RunSession
   m_TagString: Untagged
@@ -892,6 +894,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d358e70ed9e2d94a901f2c271096301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ARSpeedHUD.Hud.XREALTrackingModeSetup
+--- !u!114 &1200626517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200626513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 347aeba9e3b968e4e998d572e77a3726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ARSpeedHUD.Location.StartSessionButton
+  session: {fileID: 1200626514}
+  dopplerSource: {fileID: 1200626518}
+  button: {fileID: 0}
+  buttonLabel: {fileID: 0}
+--- !u!114 &1200626518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200626513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8540ac1a8a67e6145a4f8444205386bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ARSpeedHUD.Location.DopplerLocationSource
 --- !u!1 &1257296445
 GameObject:
   m_ObjectHideFlags: 0
