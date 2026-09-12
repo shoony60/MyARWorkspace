@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1"
+     creator="MyARWorkspace"
+     xmlns="http://www.topografix.com/GPX/1/1"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <name>Seoul Running Route</name>
+    <desc>Android Emulator GPS test route near Seoul City Hall.</desc>
+  </metadata>
+  <trk>
+    <name>Seoul City Hall Test Run</name>
+    <type>running</type>
+    <trkseg>
+      <trkpt lat="37.566500" lon="126.978000"><ele>38.0</ele><time>2026-09-12T00:00:00Z</time></trkpt>
+      <trkpt lat="37.566500" lon="126.978157"><ele>38.0</ele><time>2026-09-12T00:00:05Z</time></trkpt>
+      <trkpt lat="37.566500" lon="126.978314"><ele>38.1</ele><time>2026-09-12T00:00:10Z</time></trkpt>
+      <trkpt lat="37.566500" lon="126.978471"><ele>38.1</ele><time>2026-09-12T00:00:15Z</time></trkpt>
+      <trkpt lat="37.566500" lon="126.978628"><ele>38.2</ele><time>2026-09-12T00:00:20Z</time></trkpt>
+      <trkpt lat="37.566500" lon="126.978785"><ele>38.2</ele><time>2026-09-12T00:00:25Z</time></trkpt>
+      <trkpt lat="37.566500" lon="126.978942"><ele>38.3</ele><time>2026-09-12T00:00:30Z</time></trkpt>
+      <trkpt lat="37.566375" lon="126.978942"><ele>38.3</ele><time>2026-09-12T00:00:35Z</time></trkpt>
+      <trkpt lat="37.566250" lon="126.978942"><ele>38.2</ele><time>2026-09-12T00:00:40Z</time></trkpt>
+      <trkpt lat="37.566125" lon="126.978942"><ele>38.2</ele><time>2026-09-12T00:00:45Z</time></trkpt>
+      <trkpt lat="37.566000" lon="126.978942"><ele>38.1</ele><time>2026-09-12T00:00:50Z</time></trkpt>
+      <trkpt lat="37.566000" lon="126.978785"><ele>38.1</ele><time>2026-09-12T00:00:55Z</time></trkpt>
+      <trkpt lat="37.566000" lon="126.978628"><ele>38.0</ele><time>2026-09-12T00:01:00Z</time></trkpt>
+      <trkpt lat="37.566000" lon="126.978471"><ele>38.0</ele><time>2026-09-12T00:01:05Z</time></trkpt>
+      <trkpt lat="37.566000" lon="126.978314"><ele>37.9</ele><time>2026-09-12T00:01:10Z</time></trkpt>
+      <trkpt lat="37.566000" lon="126.978157"><ele>37.9</ele><time>2026-09-12T00:01:15Z</time></trkpt>
+      <trkpt lat="37.566000" lon="126.978000"><ele>38.0</ele><time>2026-09-12T00:01:20Z</time></trkpt>
+      <trkpt lat="37.566125" lon="126.978000"><ele>38.0</ele><time>2026-09-12T00:01:25Z</time></trkpt>
+      <trkpt lat="37.566250" lon="126.978000"><ele>38.0</ele><time>2026-09-12T00:01:30Z</time></trkpt>
+      <trkpt lat="37.566375" lon="126.978000"><ele>38.0</ele><time>2026-09-12T00:01:35Z</time></trkpt>
+      <trkpt lat="37.566500" lon="126.978000"><ele>38.0</ele><time>2026-09-12T00:01:40Z</time></trkpt>
+    </trkseg>
+  </trk>
+</gpx>
