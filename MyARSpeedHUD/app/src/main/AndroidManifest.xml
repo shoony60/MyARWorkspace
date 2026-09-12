@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- XREAL One Pro는 USB-C DisplayPort Alt Mode(대체 모드)로 연결되며,
+    2D 모드에서는 휴대전화 화면에 표시되는 내용을 그대로 미러링하므로
+    별도의 외부 디스플레이 권한이나 기능이 필요하지 않습니다. -->
 
     <application
         android:allowBackup="true"
@@ -13,16 +23,21 @@
         android:theme="@style/Theme.MyARSpeedHUD">
         <activity
             android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|screenLayout"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.MyARSpeedHUD"
-            android:windowSoftInputMode="adjustResize">
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.MyARSpeedHUD">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
+        <service
+            android:name=".location.LocationForegroundService"
+            android:exported="false"
+            android:foregroundServiceType="location" />
+    </application>
 </manifest>

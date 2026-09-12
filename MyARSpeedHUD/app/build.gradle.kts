@@ -12,7 +12,7 @@ android {
     defaultConfig {
         applicationId = "com.myarspeedhud.app"
         minSdk = 26
-        targetSdk = 37
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -27,8 +27,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     buildFeatures {
         compose = true
@@ -51,4 +51,10 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     debugImplementation(libs.androidx.compose.ui.tooling)
+
+    // ViewModel 사용
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.6")
+    
+    // 이 앱에서 GPS를 읽는 핵심 의존성
+    implementation("com.google.android.gms:play-services-location:21.3.0")
 }
