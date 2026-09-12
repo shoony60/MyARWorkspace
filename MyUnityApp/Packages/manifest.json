@@ -12,7 +12,7 @@
     "com.unity.ugui": "2.0.0",
     "com.unity.visualscripting": "1.9.12",
     "com.unity.xr.interaction.toolkit": "3.3.2",
-    "com.xreal.xr": "file:C:/Users/shoon/Downloads/com.xreal.xr.tar.gz",
+    "com.xreal.xr": "file:com.xreal.xr",
     "com.unity.modules.accessibility": "1.0.0",
     "com.unity.modules.adaptiveperformance": "1.0.0",
     "com.unity.modules.ai": "1.0.0",
