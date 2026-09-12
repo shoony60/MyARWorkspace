@@ -23,6 +23,12 @@ namespace ARSpeedHUD.Location
         public static void EnsurePermissionsThenStart()
         {
 #if PLATFORM_ANDROID && !UNITY_EDITOR
+            if (!Permission.HasUserAuthorizedPermission(Permission.FineLocation))
+            {
+                Debug.LogError("[LocationForegroundServiceBridge] ACCESS_FINE_LOCATION is not granted; service start skipped.");
+                return;
+            }
+
             if (!Permission.HasUserAuthorizedPermission(BackgroundLocationPermission))
             {
                 Debug.Log("[LocationForegroundServiceBridge] Requesting ACCESS_BACKGROUND_LOCATION");

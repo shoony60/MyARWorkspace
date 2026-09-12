@@ -28,8 +28,30 @@ namespace ARSpeedHUD.Location
 
         private bool _isTracking;
 
-        private void OnEnable() => button.onClick.AddListener(OnClick);
-        private void OnDisable() => button.onClick.RemoveListener(OnClick);
+        private void OnEnable()
+        {
+            if (button == null)
+            {
+                button = GetComponent<Button>();
+            }
+
+            if (button != null)
+            {
+                button.onClick.AddListener(OnClick);
+            }
+            else
+            {
+                Debug.LogWarning("[StartSessionButton] Button reference is not assigned; auto-start remains available.");
+            }
+        }
+
+        private void OnDisable()
+        {
+            if (button != null)
+            {
+                button.onClick.RemoveListener(OnClick);
+            }
+        }
 
         private void Start()
         {
@@ -45,7 +67,6 @@ namespace ARSpeedHUD.Location
             // 검게 꺼지는 것을 확인했으며, 네이티브 앱의 DisplayPort 미러링과 같다.
             // 따라서 글래스를 켜 두려면 휴대전화 화면도 켜야 한다. 러닝 중 배터리
             // 소모와 눈부심을 줄이기 위해 ScreenKeepAliveBridge로 밝기를 최저로 낮춘다.
-            LocationForegroundServiceBridge.EnsurePermissionsThenStart();
             ScreenKeepAliveBridge.KeepAliveDimmed();
             RequestPermissionThenStart();
 #else
@@ -95,6 +116,19 @@ namespace ARSpeedHUD.Location
         private void StartTracking()
         {
             Debug.Log($"[StartSessionButton] StartTracking() -- session={session != null}, dopplerSource={dopplerSource != null}");
+
+            if (session == null || dopplerSource == null)
+            {
+                Debug.LogError("[StartSessionButton] Session or DopplerLocationSource reference is not assigned.");
+                return;
+            }
+
+#if PLATFORM_ANDROID && !UNITY_EDITOR
+            // Android 14 이상에서는 위치 권한이 승인되기 전에 location 유형의
+            // foreground service를 시작하면 SecurityException으로 프로세스가 종료된다.
+            // 이 메서드는 ACCESS_FINE_LOCATION 승인 후에만 호출된다.
+            LocationForegroundServiceBridge.EnsurePermissionsThenStart();
+#endif
             session.StartSession(dopplerSource);
             _isTracking = true;
             if (buttonLabel != null) buttonLabel.text = "STOP";

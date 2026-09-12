@@ -47,3 +47,7 @@ Thumbs.db
 *.opendb
 *.VC.db
 sysinfo.txt
+# Unity player build outputs
+*.apk
+*.aab
+**/*_BackUpThisFolder_ButDontShipItWithYourGame/
